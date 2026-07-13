@@ -189,6 +189,11 @@
   .p-info .role{font-size:11.5px; color:var(--muted); margin-top:2px;}
   .p-info [contenteditable="true"]{outline:1px dashed transparent; border-radius:3px; padding:1px 3px;}
   body.editing .p-info [contenteditable="true"]:hover, body.editing .p-info [contenteditable="true"]:focus{outline-color:var(--gold); background:#fffbf0;}
+
+  /* ---------- Teks halaman yang bisa diedit admin ---------- */
+  [data-editable]{outline:1px dashed transparent; border-radius:4px; padding:1px 3px; margin:-1px -3px;}
+  body.editing [data-editable]{cursor:text;}
+  body.editing [data-editable]:hover, body.editing [data-editable]:focus{outline-color:var(--gold); background:rgba(201,154,61,0.08);}
   .remove-x{
     position:absolute; top:6px; right:6px; width:20px; height:20px; border-radius:50%;
     background:var(--maroon); color:#fff; border:none; font-size:12px; cursor:pointer; line-height:1; display:none;
@@ -391,9 +396,9 @@
 
 <section class="hero" id="beranda">
   <div class="mark site-logo" style="width:66px;height:66px;"><img alt="Logo IPNU"></div>
-  <h1>Pimpinan Cabang Ikatan Pelajar<br>Nahdlatul Ulama</h1>
-  <div class="sub">Kabupaten Banjar</div>
-  <div class="masa">Provinsi Kalimantan Selatan &bull; Masa Khidmat 2026&ndash;2028</div>
+  <h1 data-editable="hero-title">Pimpinan Cabang Ikatan Pelajar<br>Nahdlatul Ulama</h1>
+  <div class="sub" data-editable="hero-sub">Kabupaten Banjar</div>
+  <div class="masa" data-editable="hero-masa">Provinsi Kalimantan Selatan &bull; Masa Khidmat 2026&ndash;2028</div>
   <div class="cta-row">
     <a href="#layanan" class="btn btn-primary">Layanan Kader</a>
     <a href="#form-jas" class="btn btn-ghost">Pesan Jas IPNU</a>
@@ -420,9 +425,9 @@
   <div class="block-inner">
     <div class="section-head">
       <div>
-        <span class="eyebrow">Organisasi</span>
-        <h2>Struktur Pimpinan Cabang</h2>
-        <p>Susunan Pimpinan Cabang IPNU Kabupaten Banjar masa khidmat 2026&ndash;2028. Masuk sebagai admin untuk mengubah nama, jabatan, atau menambah/menghapus anggota.</p>
+        <span class="eyebrow" data-editable="struktur-eyebrow">Organisasi</span>
+        <h2 data-editable="struktur-title">Struktur Pimpinan Cabang</h2>
+        <p data-editable="struktur-desc">Susunan Pimpinan Cabang IPNU Kabupaten Banjar masa khidmat 2026&ndash;2028. Masuk sebagai admin untuk mengubah nama, jabatan, atau menambah/menghapus anggota.</p>
       </div>
     </div>
     <div id="struktur-content"><p class="empty-note">Memuat data pengurus&hellip;</p></div>
@@ -436,29 +441,29 @@
   <div class="block-inner">
     <div class="section-head">
       <div>
-        <span class="eyebrow">Layanan Digital</span>
-        <h2>Pusat Layanan Kader</h2>
-        <p>Fasilitas administratif digital untuk mempermudah pendampingan dan kebutuhan atribut kader IPNU se-Kabupaten Banjar. Semua pengajuan dapat langsung diproses via WhatsApp Narahubung: <a href="https://wa.me/6283853209822" target="_blank" rel="noopener" style="color:var(--maroon); font-weight:700;">0838-5320-9822</a>.</p>
+        <span class="eyebrow" data-editable="layanan-eyebrow">Layanan Digital</span>
+        <h2 data-editable="layanan-title">Pusat Layanan Kader</h2>
+        <p data-editable="layanan-desc">Fasilitas administratif digital untuk mempermudah pendampingan dan kebutuhan atribut kader IPNU se-Kabupaten Banjar. Semua pengajuan dapat langsung diproses via WhatsApp Narahubung: <a href="https://wa.me/6283853209822" target="_blank" rel="noopener" style="color:var(--maroon); font-weight:700;">0838-5320-9822</a>.</p>
       </div>
     </div>
 
     <div class="service-grid">
       <div class="service-card">
         <div class="service-icon">&#127891;</div>
-        <h3>Konsultasi Kaderisasi</h3>
-        <p>Konsultasi langsung dengan Departemen Kaderisasi PC IPNU Banjar seputar pembinaan dan jenjang kader.</p>
+        <h3 data-editable="service1-title">Konsultasi Kaderisasi</h3>
+        <p data-editable="service1-desc">Konsultasi langsung dengan Departemen Kaderisasi PC IPNU Banjar seputar pembinaan dan jenjang kader.</p>
         <a href="https://wa.me/6283853209822?text=Assalamu%27alaikum%2C%20saya%20ingin%20konsultasi%20seputar%20kaderisasi." target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Hubungi via WhatsApp</a>
       </div>
       <div class="service-card">
         <div class="service-icon">&#128240;</div>
-        <h3>Ajukan Berita</h3>
-        <p>Koordinasi dengan Lembaga Pers dan Penerbitan (LPP) PC IPNU Kab. Banjar seputar publikasi berita ranting.</p>
+        <h3 data-editable="service2-title">Ajukan Berita</h3>
+        <p data-editable="service2-desc">Koordinasi dengan Lembaga Pers dan Penerbitan (LPP) PC IPNU Kab. Banjar seputar publikasi berita.</p>
         <a href="https://wa.me/6283853209822?text=Assalamu%27alaikum%2C%20saya%20ingin%20mengajukan%20publikasi%20berita%20ke%20LPP%20PC%20IPNU%20Kab.%20Banjar." target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Hubungi via WhatsApp</a>
       </div>
       <div class="service-card">
         <div class="service-icon">&#129508;</div>
-        <h3>Pemesanan Jas IPNU</h3>
-        <p>Pesan Jas IPNU resmi untuk kebutuhan pribadi maupun ranting/PAC. Lengkapi formulir di bawah untuk memesan.</p>
+        <h3 data-editable="service3-title">Pemesanan Jas IPNU</h3>
+        <p data-editable="service3-desc">Pesan Jas IPNU resmi untuk kebutuhan pribadi maupun ranting/PAC. Lengkapi formulir di bawah untuk memesan.</p>
         <a href="#form-jas" class="btn btn-primary btn-sm">Isi Formulir Pemesanan</a>
       </div>
     </div>
@@ -501,9 +506,9 @@
   <div class="block-inner">
     <div class="section-head">
       <div>
-        <span class="eyebrow">Publikasi</span>
-        <h2>Kabar &amp; Agenda Pimpinan Cabang</h2>
-        <p>Dinamika kegiatan dan opini kader dari ranting-ranting IPNU se-Kabupaten Banjar, lengkap dengan agenda kegiatan terdekat.</p>
+        <span class="eyebrow" data-editable="berita-eyebrow">Publikasi</span>
+        <h2 data-editable="berita-title">Kabar &amp; Agenda Pimpinan Cabang</h2>
+        <p data-editable="berita-desc">Dinamika kegiatan dan opini kader IPNU se-Kabupaten Banjar, lengkap dengan agenda kegiatan terdekat.</p>
       </div>
       <a href="https://instagram.com/pc.ipnukabbanjar" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Lihat Semua di Instagram</a>
     </div>
@@ -530,9 +535,9 @@
   <div class="block-inner">
     <div class="section-head">
       <div>
-        <span class="eyebrow">Dokumentasi</span>
-        <h2>Galeri Foto Kegiatan</h2>
-        <p>Dokumentasi visual kegiatan Pimpinan Cabang, PAC, PK, dan PR IPNU se-Kabupaten Banjar.</p>
+        <span class="eyebrow" data-editable="galeri-eyebrow">Dokumentasi</span>
+        <h2 data-editable="galeri-title">Galeri Foto Kegiatan</h2>
+        <p data-editable="galeri-desc">Dokumentasi visual kegiatan Pimpinan Cabang, PAC, PK, dan PR IPNU se-Kabupaten Banjar.</p>
       </div>
     </div>
     <div class="galeri-grid" id="galeri-grid"></div>
@@ -613,7 +618,7 @@
           <div class="mark site-logo" style="width:42px;height:42px;"><img alt="Logo IPNU"></div>
           <div class="brand-text"><div class="b1">PC IPNU Banjar</div><div class="b2">Kab. Banjar · Kalsel</div></div>
         </div>
-        <p>Pimpinan Cabang Ikatan Pelajar Nahdlatul Ulama Kabupaten Banjar. Wadah pergerakan pelajar Nahdliyin menuju generasi yang berilmu dan berkhidmat.</p>
+        <p data-editable="footer-desc">Pimpinan Cabang Ikatan Pelajar Nahdlatul Ulama Kabupaten Banjar. Wadah pergerakan pelajar Nahdliyin menuju generasi yang berilmu dan berkhidmat.</p>
       </div>
       <div>
         <h5>Organisasi</h5>
@@ -639,8 +644,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 PC IPNU Kabupaten Banjar. Hak Cipta Dilindungi.</span>
-      <span>Belajar &middot; Berjuang &middot; Bertaqwa</span>
+      <span data-editable="footer-copyright">&copy; 2026 PC IPNU Kabupaten Banjar. Hak Cipta Dilindungi.</span>
+      <span data-editable="footer-tagline">Belajar &middot; Berjuang &middot; Bertaqwa</span>
     </div>
   </div>
 </footer>
@@ -659,7 +664,8 @@
    admin, dan tersimpan otomatis di browser (localStorage) di perangkat
    yang sedang login sebagai admin.
 ===================================================================== */
-const ADMIN_PASSWORD = 'ipnu1954banjarmanis'; // silakan ganti kata sandi ini
+const ADMIN_PASSWORD_DEFAULT = 'ipnu1954banjarmanis'; // dipakai hanya jika belum pernah diganti lewat menu admin
+let adminPassword = ADMIN_PASSWORD_DEFAULT;
 let isAdmin = false;
 
 /* Logo resmi PC IPNU Kab. Banjar (disematkan sekali, dipakai ulang di header/hero/footer) */
@@ -707,7 +713,9 @@ const LS = {
   struktur: 'ipnuBanjar_struktur',
   berita:   'ipnuBanjar_berita',
   agenda:   'ipnuBanjar_agenda',
-  galeri:   'ipnuBanjar_galeri'
+  galeri:   'ipnuBanjar_galeri',
+  teks:     'ipnuBanjar_teks',
+  password: 'ipnuBanjar_password'
 };
 
 let uidCounter = Date.now() % 100000;
@@ -814,6 +822,7 @@ let dataStruktur = null;
 let dataBerita = [];
 let dataAgenda = [];
 let dataGaleri = [];
+let dataSiteTexts = {};
 
 function initials(name){
   const parts = (name||"").trim().split(/\s+/).filter(Boolean);
@@ -851,11 +860,11 @@ function saveKey(key, value){
 function login(){
   const pass = prompt('Masukkan kata sandi admin:');
   if(pass === null) return;
-  if(pass === ADMIN_PASSWORD){
+  if(pass === adminPassword){
     isAdmin = true;
     document.body.classList.add('editing');
-    showToast('Mode edit admin aktif di perangkat ini');
-    renderAdminBar(); renderAll();
+    showToast('Mode edit admin aktif — klik langsung judul/teks bergaris untuk mengubahnya');
+    renderAdminBar(); renderAll(); setEditableMode();
   }else{
     showToast('Kata sandi salah');
   }
@@ -863,20 +872,65 @@ function login(){
 function logout(){
   isAdmin = false;
   document.body.classList.remove('editing');
-  renderAdminBar(); renderAll();
+  renderAdminBar(); renderAll(); setEditableMode();
+}
+function changePassword(){
+  if(!isAdmin) return; // jaga-jaga, tombol ini memang cuma dirender saat isAdmin true
+  const current = prompt('Untuk keamanan, masukkan dulu kata sandi admin yang sedang aktif:');
+  if(current === null) return;
+  if(current !== adminPassword){ showToast('Kata sandi saat ini salah, tidak diganti'); return; }
+  const baru = prompt('Kata sandi admin baru (minimal 6 karakter):');
+  if(baru === null) return;
+  if(baru.trim().length < 6){ showToast('Kata sandi terlalu pendek, tidak diganti'); return; }
+  const ulangi = prompt('Ketik ulang kata sandi baru untuk konfirmasi:');
+  if(ulangi === null) return;
+  if(baru.trim() !== ulangi.trim()){ showToast('Konfirmasi tidak cocok, kata sandi tidak diganti'); return; }
+  adminPassword = baru.trim();
+  saveKey(LS.password, adminPassword);
+  showToast('Kata sandi admin berhasil diganti');
 }
 function renderAdminBar(){
   const statusEl = document.getElementById('admin-status');
   const controlsEl = document.getElementById('admin-controls');
   if(isAdmin){
     statusEl.textContent = 'Mode edit admin aktif — ' + (FIREBASE_AKTIF ? 'perubahan langsung tersinkron ke semua pengunjung' : 'PERINGATAN: perubahan hanya tersimpan di browser ini (lihat FIREBASE_SETUP.md)');
-    controlsEl.innerHTML = '<button class="btn-mini danger" onclick="resetStruktur()">Reset Struktur ke SK Awal</button><button class="btn-mini solid" onclick="logout()">Keluar Mode Admin</button>';
+    controlsEl.innerHTML = '<button class="btn-mini" onclick="changePassword()">Ganti Kata Sandi</button><button class="btn-mini danger" onclick="resetStruktur()">Reset Struktur ke SK Awal</button><button class="btn-mini solid" onclick="logout()">Keluar Mode Admin</button>';
   }else{
     statusEl.textContent = 'Mode lihat' + (FIREBASE_AKTIF ? ' — tersinkron ke semua perangkat' : ' — sinkronisasi antar-perangkat belum diaktifkan (lihat FIREBASE_SETUP.md)') + '. Masuk sebagai admin untuk mengubah konten';
     controlsEl.innerHTML = '<button class="btn-mini solid" onclick="login()">Masuk sebagai Admin</button>';
   }
 }
 function renderAll(){ renderStruktur(); renderBerita(); renderAgenda(); renderGaleri(); }
+
+/* ===================================================================
+   TEKS HALAMAN YANG BISA DIEDIT ADMIN (judul, deskripsi, dsb.)
+   Elemen HTML statis ditandai atribut data-editable="kunci-unik".
+   Perubahan disimpan sebagai {kunci: html} lalu disinkronkan seperti
+   data lainnya (Firebase bila aktif, localStorage bila tidak).
+=================================================================== */
+function applySiteTexts(){
+  document.querySelectorAll('[data-editable]').forEach(function(el){
+    const key = el.getAttribute('data-editable');
+    if(dataSiteTexts && Object.prototype.hasOwnProperty.call(dataSiteTexts, key)){
+      el.innerHTML = dataSiteTexts[key];
+    }
+  });
+}
+function setEditableMode(){
+  document.querySelectorAll('[data-editable]').forEach(function(el){
+    el.contentEditable = isAdmin ? 'true' : 'false';
+  });
+}
+function setupEditableTextListeners(){
+  document.querySelectorAll('[data-editable]').forEach(function(el){
+    el.addEventListener('blur', function(){
+      if(!isAdmin) return;
+      const key = el.getAttribute('data-editable');
+      dataSiteTexts[key] = el.innerHTML.trim();
+      saveKey(LS.teks, dataSiteTexts);
+    });
+  });
+}
 
 /* ===================================================================
    STRUKTUR
@@ -1241,12 +1295,15 @@ navList.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> navLi
 /* ---------------- Init ---------------- */
 (function init(){
   renderAdminBar();
+  setupEditableTextListeners();
+  bindLive(LS.password, ADMIN_PASSWORD_DEFAULT, function(v){ adminPassword = v; });
   bindLive(LS.struktur, JSON.parse(JSON.stringify(DEFAULT_STRUKTUR)), function(v){ dataStruktur = v; renderStruktur(); });
   bindLive(LS.berita, [], function(v){ dataBerita = v; renderBerita(); });
   bindLive(LS.agenda, DEFAULT_AGENDA, function(v){ dataAgenda = v; renderAgenda(); });
   bindLive(LS.galeri, [], function(v){ dataGaleri = v; renderGaleri(); });
+  bindLive(LS.teks, {}, function(v){ dataSiteTexts = v; applySiteTexts(); setEditableMode(); });
   if (!FIREBASE_AKTIF) {
-    console.warn('Firebase belum dikonfigurasi: berita/agenda/galeri/struktur hanya tersimpan lokal di browser ini dan TIDAK akan tampil di perangkat lain. Lihat FIREBASE_SETUP.md.');
+    console.warn('Firebase belum dikonfigurasi: berita/agenda/galeri/struktur/teks hanya tersimpan lokal di browser ini dan TIDAK akan tampil di perangkat lain. Lihat FIREBASE_SETUP.md.');
   }
 })();
 </script>
